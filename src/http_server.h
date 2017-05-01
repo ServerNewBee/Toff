@@ -5,7 +5,9 @@
 #ifndef TOFF_HTTP_SERVER_H
 #define TOFF_HTTP_SERVER_H
 
+#include "error_code.h"
 #include <vector>
+#include <functional>
 
 namespace toff
 {
