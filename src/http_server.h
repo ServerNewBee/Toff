@@ -9,6 +9,9 @@
 #include <vector>
 #include <functional>
 
+/**
+ * 包的一层，不在架构中
+ */
 class HTTPServer
 {
 public:
