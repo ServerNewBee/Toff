@@ -1,0 +1,23 @@
+/*
+ * http_rest_api_request.cpp
+ *
+ *  Created on: Aug 27, 2015
+ *      Author: yhzhu
+ */
+
+#include "http_rest_api_request.h"
+using namespace std;
+
+namespace ficus
+{
+
+HttpRESTApiRequest::HttpRESTApiRequest()
+{
+}
+
+HttpRESTApiRequest::~HttpRESTApiRequest()
+{
+}
+
+}
+

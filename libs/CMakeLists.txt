@@ -1,0 +1,5 @@
+set(PARSER_SRC http_parser/http_parser.h http_parser/http_parser.c)
+set(TYPES_SRC http_types/http_request.h http_types/http_response.h)
+add_library(parser ${PARSER_SRC})
+add_library(types ${TYPES_SRC})
+set_target_properties(types PROPERTIES LINKER_LANGUAGE CXX)

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Toff)
+project(Toff C CXX)
 
 message(STATUS "Project: Toff C++ Server")
 message(STATUS "Project Source Directory: ${PROJECT_SOURCE_DIR}")
