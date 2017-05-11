@@ -12,6 +12,8 @@
 /**
  * 包的一层，不在架构中
  */
+namespace toff
+{
 class HTTPServer
 {
 public:
@@ -19,13 +21,15 @@ public:
     {
 
     };
+
     /**
      * Bind server to the following addresses. Can be called from any thread.
      * Once a binding fails, the process will not continue.
      * @param addrs
      * @return
      */
-    int bind(std::vector<IPConfig>& addrs);
+    int bind(std::vector <IPConfig> &addrs);
+
     /**
      * Start HTTPServer.
      * Note this is a blocking call and the current thread will be used to listen for incoming connections.
@@ -34,6 +38,7 @@ public:
      * @return
      */
     int start(std::function<void()> onSuccess = nullptr);
+
     /**
      * Stop HTTPServer.
      * Can be called from any thread, but only after start() has called onSuccess.
@@ -41,11 +46,15 @@ public:
      * @return
      */
     int stop();
-    std::vector<IPConfig> addresses() const {
+
+    std::vector <IPConfig> addresses() const
+    {
         return addresses_;
     }
+
 private:
-    std::vector<IPConfig> addresses_;
+    std::vector <IPConfig> addresses_;
 };
+}
 
 #endif //TOFF_HTTP_SERVER_H
