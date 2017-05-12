@@ -86,6 +86,15 @@ int on_chunk_complete_cb(http_parser* parser)
 {
     return 0;
 }
+int generate_status(string &mStatus, string res)
+{
+}
+int generate_header(map<string, string> &mHeaders, string res)
+{
+}
+int generate_body(string &mContent, string res)
+{
+}
 
 int error(const char* error_msg)
 {
@@ -172,7 +181,11 @@ int SimpleHttpServer::process(int sock)
             break;
     }
     handler(req, res, this_ptr);
-    send(sock, raw, strlen(raw), 0);
+    string raw;
+    generate_status(res.mStatus, raw);
+    generate_headers(res.mHeaders, raw);
+    generate_body(res.mContent, raw);
+    send(sock, raw.data(), raw.length(), 0);
     close(sock);
     return 0;
 }
